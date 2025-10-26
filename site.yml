@@ -1,0 +1,11 @@
+---
+- name: Server Hardening Automation with Roles
+  hosts: servers
+  become: yes
+
+  roles:
+    - users
+    - ssh
+    - firewall
+    - updates
+    - auditing

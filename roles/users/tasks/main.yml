@@ -1,0 +1,13 @@
+---
+- name: Create admin user
+  user:
+    name: admin
+    state: present
+    groups: sudo
+
+- name: Set password expiry policy
+  lineinfile:
+    path: /etc/login.defs
+    regexp: '^PASS_MAX_DAYS'
+    line: 'PASS_MAX_DAYS 90'
+

@@ -1,0 +1,6 @@
+---
+- name: Ensure system is up to date
+  apt:
+    upgrade: dist
+    update_cache: yes
+

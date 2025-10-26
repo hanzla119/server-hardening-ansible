@@ -1,0 +1,12 @@
+---
+- name: Ensure UFW is installed
+  apt:
+    name: ufw
+    state: present
+
+- name: Enable UFW and allow only SSH
+  ufw:
+    state: enabled
+    rule: allow
+    name: OpenSSH
+
